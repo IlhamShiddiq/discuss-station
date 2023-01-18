@@ -1,0 +1,6 @@
+services:
+  discuss-station:
+    container_name: discuss-station
+    image: discuss-station:latest
+    ports:
+      - 3032:3032
