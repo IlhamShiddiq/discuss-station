@@ -1,4 +1,4 @@
-FROM node:latest AS build
+FROM node:14.17.6-stretch-slim
 WORKDIR /build
 
 COPY package.json package.json
