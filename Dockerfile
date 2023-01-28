@@ -7,6 +7,7 @@ RUN npm i
 
 COPY public/ public
 COPY src/ src
+COPY .env .env
 RUN npm run build
 
 RUN npm install -g serve
