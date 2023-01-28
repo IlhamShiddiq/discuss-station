@@ -1,0 +1,30 @@
+.discussion-wrapper {
+  width: 100%;
+
+  h1 {
+    font-size: 25px;
+    text-align: center;
+    margin: 45px auto 10px auto;
+    font-weight: 400;
+
+    span {
+      font-weight: 600;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .discussion-wrapper {
+    h1 {
+      font-size: 22px;
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .discussion-wrapper {
+    h1 {
+      font-size: 22px;
+    }
+  }
+}

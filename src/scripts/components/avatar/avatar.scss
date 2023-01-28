@@ -1,0 +1,16 @@
+.app-avatar {
+  margin: 0;
+  border-radius: 100%;
+}
+
+@media (max-width: 575.98px) {
+  .app-avatar {
+    width: 45px !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .app-avatar {
+    width: 48px !important;
+  }
+}

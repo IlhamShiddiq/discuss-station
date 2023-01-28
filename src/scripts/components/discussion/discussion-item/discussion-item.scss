@@ -1,0 +1,115 @@
+@import "../../../../styles/variables";
+
+.discussion-item {
+  background-color: $white_color;
+  width: 812px;
+  margin: auto auto 10px auto;
+  padding: 22px 26px;
+  border-bottom: 1px solid #AAAAAA;
+  border-radius: 10px;
+  box-sizing: border-box;
+
+  .discussion-item__creator {
+    display: flex;
+    margin-bottom: 8px;
+
+    img {
+      width: 25px;
+      margin-right: 10px;
+      border-radius: 100%;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .discussion-item__title {
+    margin-bottom: 6px;
+
+    a {
+      text-decoration: none;
+      h1 {
+        text-align: left;
+        margin: 0;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 27px;
+        font-style: normal;
+        color: #000000;
+      }
+    }
+  }
+
+  .discussion-item__content {
+    margin-bottom: 16px;
+
+    p {
+      margin: 0;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 22px;
+    }
+  }
+
+  .discussion-item__info {
+    display: flex;
+    .discussion-item__info-icon {
+      margin-right: 10px;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .discussion-item {
+    width: 100%;
+
+    .discussion-item__creator {
+      p {
+        margin: 0;
+        font-size: 15px;
+      }
+    }
+
+    .discussion-item__title {
+      a {
+        h1 {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .discussion-item__content {
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .discussion-item {
+    width: 100%;
+
+    .discussion-item__creator {
+      p {
+        margin: 0;
+        font-size: 15px;
+      }
+    }
+
+    .discussion-item__title {
+      a {
+        h1 {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .discussion-item__content {
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}

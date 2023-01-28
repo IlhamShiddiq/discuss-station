@@ -1,0 +1,32 @@
+@import "../../../../styles/variables";
+
+.app-tag-item {
+  background: $white_color;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  outline: inherit;
+  border-radius: 100px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #D2D2D2;
+  }
+
+  p {
+    margin: 0;
+    padding: 5px 25px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .app-tag-item p {
+    padding: 5px 15px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  //
+}

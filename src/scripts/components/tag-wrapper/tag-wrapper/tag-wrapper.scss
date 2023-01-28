@@ -1,0 +1,28 @@
+@import "../../../../styles/variables";
+
+.app-tag-wrapper {
+  background-color: $primary_color;
+  position: relative;
+
+  ul {
+    padding: 15px 82px;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      margin: 5px 7px;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .app-tag-wrapper ul {
+    padding: 19px 20px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .app-tag-wrapper ul {
+    padding: 19px 20px;
+  }
+}
