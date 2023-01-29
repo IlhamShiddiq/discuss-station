@@ -1,8 +1,9 @@
 import React from 'react'
+import DiscussionDetailWrapper from '../components/discussion/discussion-detail-wrapper/discussion-detail-wrapper'
 
 const DetailPage = () => {
   return (
-        <h1>Detail Page</h1>
+        <DiscussionDetailWrapper />
   )
 }
 

@@ -1,0 +1,53 @@
+.discussion-reply-input {
+  .discussion-reply-input__creator {
+    display: flex;
+    margin-bottom: 15px;
+
+    img {
+      width: 25px;
+      margin-right: 10px;
+      border-radius: 100%;
+    }
+
+    p {
+      margin: 0;
+      color: #494949;
+      font-size: 13px;
+      padding-top: 3px;
+    }
+  }
+
+  .discussion-reply-input__textarea {
+    textarea {
+      padding: 12px;
+      width: 100%;
+      height: 85px;
+      border-radius: 10px;
+      background: #FFFFFF;
+      border: 1px solid #000000;
+      resize: none;
+      font-family: 'Poppins', sans-serif;
+      box-sizing: border-box;
+    }
+  }
+
+  .discussion-reply-input__submit {
+    width: 100%;
+    text-align: right;
+    button {
+      text-align: center;
+      cursor: pointer;
+      width: 118px;
+      height: 33px;
+      background: #000000;
+      border: 1px solid #FFFFFF;
+      border-radius: 10px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      color: #FFFFFF;
+      margin-top: 7px;
+    }
+  }
+}

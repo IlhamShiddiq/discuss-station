@@ -1,4 +1,4 @@
-.discussion-wrapper {
+.discussion-list-wrapper {
   width: 100%;
 
   h1 {
@@ -14,7 +14,7 @@
 }
 
 @media (max-width: 575.98px) {
-  .discussion-wrapper {
+  .discussion-list-wrapper {
     h1 {
       font-size: 22px;
     }
@@ -22,7 +22,7 @@
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
-  .discussion-wrapper {
+  .discussion-list-wrapper {
     h1 {
       font-size: 22px;
     }

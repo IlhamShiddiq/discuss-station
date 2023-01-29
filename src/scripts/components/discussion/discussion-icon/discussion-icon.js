@@ -11,7 +11,7 @@ const DiscussionIcon = ({ icon, amount }) => {
 }
 
 DiscussionIcon.propTypes = {
-  icon: PropTypes.elementType.isRequired,
+  icon: PropTypes.element.isRequired,
   amount: PropTypes.number.isRequired
 }
 

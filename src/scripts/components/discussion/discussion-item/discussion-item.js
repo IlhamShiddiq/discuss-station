@@ -14,7 +14,7 @@ const DiscussionItem = ({ avatar, creator_name, created_time, title, content, li
                 <p>{creator_name} • {created_time}</p>
             </div>
             <div className="discussion-item__title">
-                <Link to="#"><h1>{title}</h1></Link>
+                <Link to="/detail"><h1>{title}</h1></Link>
             </div>
             <div className="discussion-item__content">
                 <p>{content}</p>

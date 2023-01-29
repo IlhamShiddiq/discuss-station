@@ -1,0 +1,132 @@
+.discussion-detail {
+  width: 812px;
+  margin: 23px auto 15px auto;
+
+  .discussion-detail__creator {
+    display: flex;
+    margin-bottom: 11px;
+
+    img {
+      width: 25px;
+      margin-right: 10px;
+      border-radius: 100%;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .discussion-detail__title {
+    margin-bottom: 6px;
+
+    h1 {
+      text-align: left;
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 27px;
+      font-style: normal;
+      color: #000000;
+    }
+  }
+
+  .discussion-detail__content {
+    margin-bottom: 15px;
+
+    p {
+      margin: 0;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 22px;
+    }
+  }
+
+  .discussion-detail__info {
+    display: flex;
+    margin-bottom: 20px;
+
+    p {
+      margin: 0 12px 0 0;
+      color: #494949;
+      font-size: 13px;
+      padding-top: 1px;
+    }
+  }
+
+  .discussion-detail__create-reply {
+    margin-bottom: 26px;
+    p {
+      font-size: 14px;
+      a {
+        color: #000000;
+        span {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .discussion-detail__replies {
+    .discussion-detail__replies-info {
+      display: flex;
+      margin-bottom: 10px;
+
+      a {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .discussion-detail {
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+
+    .discussion-detail__creator {
+      p {
+        font-size: 15px;
+      }
+    }
+
+    .discussion-detail__title {
+      h1 {
+        font-size: 16px;
+      }
+    }
+
+    .discussion-detail__content {
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .discussion-detail {
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+
+    .discussion-detail__creator {
+      p {
+        font-size: 15px;
+      }
+    }
+
+    .discussion-detail__title {
+      h1 {
+        font-size: 16px;
+      }
+    }
+
+    .discussion-detail__content {
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
