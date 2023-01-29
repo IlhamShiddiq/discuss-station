@@ -1,0 +1,86 @@
+@import "../../../../styles/variables";
+
+.modal-create-discussion__modal {
+  position: absolute;
+  top: 40px; left: 40px; right: 40px; bottom: 40px;
+  background-color: $white_color;
+  width: 580px;
+  height: 400px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+
+  h1 {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  form {
+    width: 100%;
+
+    .modal-create-discussion__input-group {
+      margin-bottom: 10px;
+
+      input, textarea, button {
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 10px;
+        padding: 12px 14px;
+      }
+
+      input {
+        background: #FFFFFF;
+        border: 1px solid #B5B5B5;
+        font-family: 'Poppins', sans-serif;
+
+        &:focus {
+          border: 1px solid #5d5d5d;
+          outline: none;
+        }
+      }
+
+      textarea {
+        height: 145px;
+        resize: none;
+        font-family: 'Poppins', sans-serif;
+
+        &:focus {
+          border: 1px solid #5d5d5d;
+          outline: none;
+        }
+      }
+
+      button {
+        background: #000000;
+        border-radius: 10px;
+        color: $white_color;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.modal-create-discussion__overlay {
+  width: 100%;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 575.98px) {
+  .modal-create-discussion__modal {
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 95%;
+    padding: 15px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .modal-create-discussion__modal {
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 75%;
+    padding: 15px;
+  }
+}

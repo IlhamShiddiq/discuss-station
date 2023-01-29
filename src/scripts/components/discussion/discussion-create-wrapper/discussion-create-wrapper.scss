@@ -1,0 +1,22 @@
+@import "../../../../styles/variables";
+
+.discussion-create-wrapper {
+  position: fixed;
+  bottom: 30px; right: 30px;
+
+  button {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #000000;
+    border: none;
+    color: $white_color;
+    border-radius: 100%;
+    padding-top: 5px;
+
+    .discussion-create-wrapper__plus-icon {
+      font-size: 33px;
+    }
+  }
+}
