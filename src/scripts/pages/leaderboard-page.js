@@ -1,8 +1,9 @@
 import React from 'react'
+import LeaderboardWrapper from '../components/leaderboard/leaderboard-wrapper/leaderboard-wrapper'
 
 const LeaderboardPage = () => {
   return (
-        <h1>Leaderboard Page</h1>
+        <LeaderboardWrapper />
   )
 }
 

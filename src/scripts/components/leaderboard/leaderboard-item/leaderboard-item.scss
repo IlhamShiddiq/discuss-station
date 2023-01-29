@@ -1,0 +1,58 @@
+.leaderboard-item {
+  width: 100%;
+  padding: 10px 15px;
+  border-bottom: 1px solid #AAAAAA;
+  position: relative;
+  box-sizing: border-box;
+
+  .leaderboard-item__user {
+    display: flex;
+
+    img {
+      width: 45px;
+      border-radius: 100%;
+    }
+
+    p {
+      padding-top: 10px;
+      margin: 0 0 0 10px;
+      font-weight: 400;
+      font-size: 16px;
+      color: #434343;
+    }
+
+    .leaderboard-item__user-point {
+      margin-left: auto;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .leaderboard-item {
+    .leaderboard-item__user {
+      img {
+        width: 40px;
+      }
+
+      p {
+        padding-top: 8px;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .leaderboard-item {
+    .leaderboard-item__user {
+      img {
+        width: 40px;
+      }
+
+      p {
+        padding-top: 8px;
+        font-size: 15px;
+      }
+    }
+  }
+}
