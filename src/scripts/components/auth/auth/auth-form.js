@@ -24,7 +24,7 @@ const AuthForm = ({ title, form_auth }) => {
 
 AuthForm.propTypes = {
   title: PropTypes.string.isRequired,
-  form_auth: PropTypes.element.isRequired,
+  form_auth: PropTypes.element.isRequired
 }
 
 export default AuthForm
