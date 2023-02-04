@@ -1,8 +1,10 @@
 import React from 'react'
+import AuthForm from '../components/auth/auth/auth-form'
+import LoginForm from '../components/auth/login-form/login-form'
 
 const LoginPage = () => {
   return (
-        <h1>Login Page</h1>
+        <AuthForm title="LOGIN" form_auth={<LoginForm />} />
   )
 }
 

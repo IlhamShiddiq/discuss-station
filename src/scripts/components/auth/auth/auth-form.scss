@@ -1,0 +1,103 @@
+@import "../../../../styles/variables";
+
+.app-auth {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  .app-auth__image {
+    position: relative;
+
+    .app-auth__image-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+
+      img {
+        height: 475px;
+      }
+    }
+  }
+
+  .app-auth__input {
+    background-color: #000000;
+    position: relative;
+
+    .app-auth__input-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+
+      .app-auth__input-form {
+        width: 450px;
+
+        h1 {
+          color: $white_color;
+          margin: 0 0 12px 0;
+          font-weight: 500;
+          font-size: 36px;
+          line-height: 44px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .app-auth {
+    grid-template-columns: repeat(1 , 1fr);
+
+    .app-auth__image {
+      display: none;
+    }
+
+    .app-auth__input {
+      .app-auth__input-container {
+        .app-auth__input-form {
+          width: 350px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .app-auth {
+    grid-template-columns: repeat(1 , 1fr);
+
+    .app-auth__image {
+      display: none;
+    }
+
+    .app-auth__input {
+      .app-auth__input-container {
+        .app-auth__input-form {
+          width: 350px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .app-auth {
+    grid-template-columns: repeat(1 , 1fr);
+
+    .app-auth__image {
+      display: none;
+    }
+
+    .app-auth__input {
+      .app-auth__input-container {
+        .app-auth__input-form {
+          width: 350px;
+        }
+      }
+    }
+  }
+}

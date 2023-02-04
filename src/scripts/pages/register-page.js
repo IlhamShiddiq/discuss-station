@@ -1,8 +1,10 @@
 import React from 'react'
+import AuthForm from '../components/auth/auth/auth-form'
+import RegisterForm from '../components/auth/register-form/register-form'
 
 const RegisterPage = () => {
   return (
-        <h1>Register Page</h1>
+      <AuthForm title="REGISTER" form_auth={<RegisterForm />} />
   )
 }
 
