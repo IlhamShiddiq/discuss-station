@@ -1,24 +1,31 @@
 import React from 'react'
 import DiscussionReplyItem from '../discussion-reply-item/discussion-reply-item'
 import './discussion-reply-list.scss'
+import PropTypes from 'prop-types'
+import { postedAt } from '../../../utils/time-format'
 
-const DiscussionReplyList = () => {
+const DiscussionReplyList = ({ comments, authUser }) => {
   return (
         <div className="discussion-reply-list">
-          <DiscussionReplyItem avatar={`${process.env.REACT_APP_BASE_URL}/images/avatar-example-2.png`}
-                               creator_name={'Shiddiq Ilham'}
-                               content={'test'}
-                               created_time={'2 Hours ago'}
-                               like_count={2}
-                               dislike_count={0}/>
-          <DiscussionReplyItem avatar={`${process.env.REACT_APP_BASE_URL}/images/avatar-example-2.png`}
-                               creator_name={'Someone Special'}
-                               content={'Halo! Saya Dimas, dari Bandung. Saat ini, saya sedang belajar React di Dicoding Academy.'}
-                               created_time={'3 Hours ago'}
-                               like_count={0}
-                               dislike_count={0}/>
+            {
+                comments.map((comment) => (
+                    <DiscussionReplyItem key={comment.id} id={comment.id}
+                                         avatar={comment.owner.avatar}
+                                         creator_name={comment.owner.name}
+                                         content={comment.content}
+                                         created_time={postedAt(comment.createdAt)}
+                                         up_vote_by={comment.upVotesBy}
+                                         down_vote_by={comment.downVotesBy}
+                                         authUser={authUser} />
+                ))
+            }
         </div>
   )
+}
+
+DiscussionReplyList.propTypes = {
+  comments: PropTypes.array,
+  authUser: PropTypes.string
 }
 
 export default DiscussionReplyList

@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import './discussion-item.scss'
 import { Link } from 'react-router-dom'
 
-const DiscussionItem = ({ avatar, creator_name, created_time, title, content, like_count, dislike_count, reply_count, category }) => {
+const DiscussionItem = ({ id, avatar, creator_name, created_time, title, content, like_count, dislike_count, reply_count, category }) => {
   return (
         <div className="discussion-item">
             <div className="discussion-item__creator">
@@ -14,7 +14,7 @@ const DiscussionItem = ({ avatar, creator_name, created_time, title, content, li
                 <p>{creator_name} • {created_time}</p>
             </div>
             <div className="discussion-item__title">
-                <Link to="/detail"><h1>{title}</h1></Link>
+                <Link to={`/detail/${id}`}><h1>{title}</h1></Link>
             </div>
             <div className="discussion-item__content">
                 <p>{content}</p>
@@ -30,6 +30,7 @@ const DiscussionItem = ({ avatar, creator_name, created_time, title, content, li
 }
 
 DiscussionItem.propTypes = {
+  id: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
   creator_name: PropTypes.string.isRequired,
   created_time: PropTypes.string.isRequired,

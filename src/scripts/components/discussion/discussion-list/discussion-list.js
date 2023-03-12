@@ -1,32 +1,34 @@
 import React from 'react'
 import './discussion-list.scss'
 import DiscussionItem from '../discussion-item/discussion-item'
+import PropTypes from 'prop-types'
+import { postedAt } from '../../../utils/time-format'
 
-const DiscussionList = () => {
+const DiscussionList = ({ threads }) => {
   return (
         <div className="discussion-list">
             <ul>
-                <li><DiscussionItem avatar={`${process.env.REACT_APP_BASE_URL}/images/avatar-example.png`}
-                    creator_name={'Ilham Shiddiq'}
-                    created_time={'1 month ago'}
-                    title={'Pengalaman Belajar React di Dicoding'}
-                    content={'Menurut teman-teman, bagaimana pengalaman belajar kelas React di Dicoding? Apakah mudah ataukah sulit? Yuk, ceritakan di sini.'}
-                    like_count={0}
-                    dislike_count={0}
-                    reply_count={0}
-                    category={'getwellsoon'}/></li>
-                <li><DiscussionItem avatar={`${process.env.REACT_APP_BASE_URL}/images/avatar-example.png`}
-                    creator_name={'Ilham Shiddiq'}
-                    created_time={'1 month ago'}
-                    title={'Halo! Selamat datang dan silakan perkenalkan diri kamu!'}
-                    content={'Bagaimana kabarmu? Semoga baik-baik saja ya. Sekali lagi saya ucapkan selamat datang semuanya. Seperti yang sudah disampaikan sebelumnya, pada diskusi ini kamu bisa memperkenalkan diri kamu dan juga berkenalan dengan teman sekelas lainnya...'}
-                    like_count={0}
-                    dislike_count={0}
-                    reply_count={0}
-                    category={'justsharing'}/></li>
+                {
+                    threads.map((thread) => (
+                        <li key={thread.id}><DiscussionItem id={thread.id}
+                            avatar={thread.user.avatar}
+                            creator_name={thread.user.name}
+                            created_time={postedAt(thread.createdAt)}
+                            title={thread.title}
+                            content={thread.body}
+                            like_count={thread.upVotesBy.length}
+                            dislike_count={thread.downVotesBy.length}
+                            reply_count={thread.totalComments}
+                            category={thread.category}/></li>
+                    ))
+                }
             </ul>
         </div>
   )
+}
+
+DiscussionList.propTypes = {
+  threads: PropTypes.array.isRequired
 }
 
 export default DiscussionList

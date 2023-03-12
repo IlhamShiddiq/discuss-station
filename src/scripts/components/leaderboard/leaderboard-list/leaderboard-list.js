@@ -1,43 +1,25 @@
 import React from 'react'
 import LeaderboardItem from '../leaderboard-item/leaderboard-item'
 import './leaderboard-list.scss'
+import PropTypes from 'prop-types'
 
-const LeaderboardList = () => {
+const LeaderboardList = ({ leaderboards }) => {
   return (
       <div className="leaderboard-list">
         <h1>Top 10 <span>Discuss</span>Station’s Users</h1>
-        <LeaderboardItem avatar={`${process.env.REACT_APP_BASE_URL}/images/avatar-example.png`}
-                         user_name={'Ilham Shiddiq'}
-                         point={95}/>
-        <LeaderboardItem avatar={`${process.env.REACT_APP_BASE_URL}/images/avatar-example-2.png`}
-                         user_name={'Ilham Shiddiq'}
-                         point={95}/>
-        <LeaderboardItem avatar={`${process.env.REACT_APP_BASE_URL}/images/avatar-example.png`}
-                         user_name={'Ilham Shiddiq'}
-                         point={95}/>
-        <LeaderboardItem avatar={`${process.env.REACT_APP_BASE_URL}/images/avatar-example-2.png`}
-                         user_name={'Ilham Shiddiq'}
-                         point={95}/>
-        <LeaderboardItem avatar={`${process.env.REACT_APP_BASE_URL}/images/avatar-example.png`}
-                         user_name={'Ilham Shiddiq'}
-                         point={95}/>
-        <LeaderboardItem avatar={`${process.env.REACT_APP_BASE_URL}/images/avatar-example-2.png`}
-                         user_name={'Ilham Shiddiq'}
-                         point={95}/>
-        <LeaderboardItem avatar={`${process.env.REACT_APP_BASE_URL}/images/avatar-example.png`}
-                         user_name={'Ilham Shiddiq'}
-                         point={95}/>
-        <LeaderboardItem avatar={`${process.env.REACT_APP_BASE_URL}/images/avatar-example-2.png`}
-                         user_name={'Ilham Shiddiq'}
-                         point={95}/>
-        <LeaderboardItem avatar={`${process.env.REACT_APP_BASE_URL}/images/avatar-example.png`}
-                         user_name={'Ilham Shiddiq'}
-                         point={95}/>
-        <LeaderboardItem avatar={`${process.env.REACT_APP_BASE_URL}/images/avatar-example-2.png`}
-                         user_name={'Ilham Shiddiq'}
-                         point={95}/>
+          {
+              leaderboards.map((leaderboard) => (
+                  <LeaderboardItem key={leaderboard.user.id} avatar={leaderboard.user.avatar}
+                                   user_name={leaderboard.user.name}
+                                   point={leaderboard.score}/>
+              ))
+          }
       </div>
   )
+}
+
+LeaderboardList.propTypes = {
+  leaderboards: PropTypes.array.isRequired
 }
 
 export default LeaderboardList
