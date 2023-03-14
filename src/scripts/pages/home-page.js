@@ -5,6 +5,9 @@ import DiscussionCreateWrapper from '../components/discussion/discussion-create-
 import { useDispatch, useSelector } from 'react-redux'
 import { asyncPopulateUsersAndThreads } from '../states/shared/action'
 import { asyncAddThread } from '../states/threads/action'
+import { setNavigationActionCreator } from '../states/navigations/action'
+import { useNavigate } from 'react-router-dom'
+import { asyncUnsetAuthUser } from '../states/auth-user/action'
 
 const HomePage = () => {
   const {
@@ -15,6 +18,14 @@ const HomePage = () => {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [tags, setTags] = useState([])
   const dispatch = useDispatch()
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    dispatch(setNavigationActionCreator([
+      { label: 'Leaderboards', onClickHandler: navigateToLeaderboards },
+      { label: authUser ? 'Signout' : 'Login', onClickHandler: authUser ? signOutHandler : navigateToLogin }
+    ]))
+  }, [authUser])
 
   useEffect(() => {
     dispatch(asyncPopulateUsersAndThreads())
@@ -43,6 +54,18 @@ const HomePage = () => {
 
   const onCategoryButtonClick = (category) => {
     setSelectedCategory(category)
+  }
+
+  const navigateToLeaderboards = () => {
+    navigate('/leaderboard')
+  }
+
+  const navigateToLogin = () => {
+    navigate('/login')
+  }
+
+  const signOutHandler = () => {
+    dispatch(asyncUnsetAuthUser())
   }
 
   return (

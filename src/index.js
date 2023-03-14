@@ -9,10 +9,8 @@ import store from './scripts/states'
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <Provider store={store}>
-      <React.StrictMode>
-          <BrowserRouter>
-              <DiscussApp />
-          </BrowserRouter>
-      </React.StrictMode>
+      <BrowserRouter>
+          <DiscussApp />
+      </BrowserRouter>
   </Provider>
 )
