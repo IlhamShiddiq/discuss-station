@@ -7,14 +7,14 @@ import LeaderboardPage from '../pages/leaderboard-page'
 import LoginPage from '../pages/login-page'
 import RegisterPage from '../pages/register-page'
 import { useDispatch } from 'react-redux'
-import { asyncPreloadProcess } from '../states/is-preload/action'
 import Loading from './loading/loading'
+import { asyncGetAuthUser } from '../states/auth-user/action'
 
 const DiscussApp = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(asyncPreloadProcess())
+    dispatch(asyncGetAuthUser())
   }, [dispatch])
 
   return (

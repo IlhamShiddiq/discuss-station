@@ -37,6 +37,19 @@ const asyncSetAuthUser = ({ email, password }) => {
   }
 }
 
+const asyncGetAuthUser = () => {
+  return async (dispatch) => {
+    dispatch(showLoading())
+    try {
+      const userAuth = await api.getOwnProfile()
+      dispatch(setAuthUserActionCreator(userAuth))
+    } catch (error) {
+      dispatch(setAuthUserActionCreator(null))
+    }
+    dispatch(hideLoading())
+  }
+}
+
 const asyncUnsetAuthUser = () => {
   return (dispatch) => {
     dispatch(unsetAuthUserActionCreator())
@@ -49,5 +62,6 @@ export {
   setAuthUserActionCreator,
   unsetAuthUserActionCreator,
   asyncSetAuthUser,
+  asyncGetAuthUser,
   asyncUnsetAuthUser
 }
