@@ -1,5 +1,5 @@
 /**
- * test scenario for talksReducer
+ * test scenario for threadDetailReducer
  *
  * - threadDetailReducer function
  *  - should return the initial state when given by unknown action

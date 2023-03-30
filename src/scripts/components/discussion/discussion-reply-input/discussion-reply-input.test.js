@@ -3,7 +3,6 @@
  *
  * - DiscussionReplyInput component
  *   - should handle reply typing correctly
- *   - should call login function when login button is clicked
  */
 
 import '@testing-library/jest-dom'

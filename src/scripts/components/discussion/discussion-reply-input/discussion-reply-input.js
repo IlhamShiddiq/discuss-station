@@ -22,7 +22,7 @@ const DiscussionReplyInput = () => {
             <form>
                 <div className="discussion-reply-input__creator">
                     <img src={authUser.avatar} alt="Creator Avatar"/>
-                    <p>{'Shiddiq Ilham'}</p>
+                    <p>{authUser.name}</p>
                 </div>
                 <div className="discussion-reply-input__textarea">
                     <textarea placeholder="Write your reply" value={reply} onChange={onReplyChange}></textarea>

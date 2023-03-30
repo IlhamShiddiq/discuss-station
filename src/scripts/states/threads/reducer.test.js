@@ -1,5 +1,5 @@
 /**
- * test scenario for talksReducer
+ * test scenario for threadsReducer
  *
  * - threadsReducer function
  *  - should return the initial state when given by unknown action
@@ -57,7 +57,7 @@ describe('threadsReducer function', () => {
     expect(nextState).toEqual(action.payload.threads)
   })
 
-  it('should return the talks with the new talk when given by ADD_TALK action', () => {
+  it('should return the threads with the new thread when given by ADD_THREAD action', () => {
     const initialState = [
       {
         id: 'thread-1',
